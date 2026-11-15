@@ -1,3 +1,12 @@
+---
+layout: single
+permalink: /
+title: ""
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
 # Hi, I'm Bailasan!
 
 ### I speak syntax, think in Python, and occasionally argue with algorithms.
