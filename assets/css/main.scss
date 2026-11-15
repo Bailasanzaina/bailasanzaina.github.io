@@ -1,11 +1,12 @@
+
 ---
 ---
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * Main stylesheet
+ * Bailasan Zaina — Warm Editorial + Modern Tech
+ * Keep the two --- lines at the beginning for Jekyll.
  */
 
 @import
@@ -37,12 +38,217 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
-/* Existing Sass imports end here */
 
-/* Bailasan Zaina — Warm Editorial */
+/* ------------------------------------------
+   1. Color palette
+------------------------------------------ */
+
 $cream: #F7F4ED;
 $ink: #172C36;
 $sage: #335D50;
 $clay: #BD6252;
+$soft-cream: #EEE9DF;
+$border-color: #DED8CC;
 
-/* Rest of your custom styling */
+/* ------------------------------------------
+   2. Overall background and typography
+------------------------------------------ */
+
+html,
+body {
+  background-color: $cream;
+}
+
+body {
+  color: $ink;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.site-title {
+  font-family: 'Space Grotesk', sans-serif;
+  color: $ink;
+  letter-spacing: -0.025em;
+}
+
+p, li {
+  line-height: 1.8;
+}
+
+.page__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+/* ------------------------------------------
+   3. Code-inspired typography
+------------------------------------------ */
+
+code, pre, .page__meta {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+pre {
+  background-color: $ink;
+  color: #E8F0E8;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+/* ------------------------------------------
+   4. Header and navigation
+------------------------------------------ */
+
+.masthead {
+  background-color: $cream;
+  border-bottom: 1px solid $border-color;
+}
+
+.greedy-nav {
+  background-color: $cream;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.greedy-nav a,
+.masthead__menu-item a {
+  color: $ink;
+}
+
+.greedy-nav a:hover,
+.masthead__menu-item a:hover {
+  color: $clay;
+}
+
+.site-title {
+  font-weight: 700;
+}
+
+/* ------------------------------------------
+   5. Sidebar and profile
+------------------------------------------ */
+
+.sidebar {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.author__name {
+  font-family: 'Space Grotesk', sans-serif;
+  color: $ink;
+}
+
+.author__bio {
+  color: #52605C;
+  line-height: 1.7;
+}
+
+.author__avatar img {
+  border-radius: 18px;
+  border: 3px solid #E7DED0;
+}
+
+/* ------------------------------------------
+   6. Links and headings
+------------------------------------------ */
+
+.page__content a,
+.archive a {
+  color: $sage;
+}
+
+.page__content a:hover,
+.archive a:hover {
+  color: $clay;
+}
+
+.page__content h2 {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.page__content h3 {
+  color: $sage;
+}
+
+/* ------------------------------------------
+   7. Lists and content
+------------------------------------------ */
+
+.page__content li {
+  margin-bottom: 0.5rem;
+}
+
+.page__content strong {
+  color: $ink;
+  font-weight: 700;
+}
+
+.page__content blockquote {
+  background-color: $soft-cream;
+  border-left: 4px solid $clay;
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.4rem;
+  color: $ink;
+}
+
+/* ------------------------------------------
+   8. Buttons
+------------------------------------------ */
+
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background-color: $ink;
+  color: #FFFFFF;
+}
+
+.btn--primary:hover {
+  background-color: $sage;
+}
+
+/* ------------------------------------------
+   9. Footer
+------------------------------------------ */
+
+.page__footer {
+  background-color: $ink;
+  color: #F7F4ED;
+}
+
+.page__footer a {
+  color: #B5DDCB;
+}
+
+.page__footer-follow,
+.page__footer-copyright {
+  color: #D1DBD7;
+}
+
+/* ------------------------------------------
+   10. Mobile adjustments
+------------------------------------------ */
+
+@media (max-width: 768px) {
+  .page__title {
+    font-size: 2rem;
+  }
+
+  .page__content {
+    font-size: 0.95rem;
+  }
+
+  .masthead {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
