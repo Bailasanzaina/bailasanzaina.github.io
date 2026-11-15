@@ -1,6 +1,6 @@
 ---
 ---
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 /*
  * This file controls what is imported from /_sass
  *
@@ -37,3 +37,12 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+/* Existing Sass imports end here */
+
+/* Bailasan Zaina — Warm Editorial */
+$cream: #F7F4ED;
+$ink: #172C36;
+$sage: #335D50;
+$clay: #BD6252;
+
+/* Rest of your custom styling */
